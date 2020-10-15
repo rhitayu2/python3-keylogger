@@ -6,6 +6,7 @@ in a given time interval
 Dependencies required:
    <ul>
    <li>keyboard</li>
+   <li>configparser</li>
    </ul>
 Install the dendencies using: `pip3 install -r requirements.txt`
 
@@ -15,8 +16,7 @@ Install the dendencies using: `pip3 install -r requirements.txt`
 3. The keylogger file would require sudo privileges.
 
 ## Tweaking
-1. You can change the **interval** with which the program `keylogger.py` 
-   would send the data.
-2. Change the **host or port** in the `server.py` file
+1. You can change the **interval** in the keys.conf file
+2. You can change the **host or port** in the keys.conf file
 
 
