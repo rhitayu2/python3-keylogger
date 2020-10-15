@@ -1,13 +1,19 @@
 import socket
 import sys
+import configparser
 
-host = '127.0.0.1'
-port = 5003
+def getaddr():
+    conf = configparser.ConfigParser()
+    conf.read_file(open('key.conf'))
+    host = conf.get('connection','host')
+    port = conf.get('connection','port')
+    return (host,port)
 
 def main():
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server.bind((host, port))
-    print(f"[+] Listening on {host}:{port}")
+    serv_addr = getaddr()
+    server.bind(serv_addr)
+    print(f"[+] Listening on {serv_addr[0]}:{serv_addr[1]}")
     server.listen()
     try:
         while True:
