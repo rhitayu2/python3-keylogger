@@ -4,7 +4,7 @@ in a given time interval
 
 ## Requirements
 Dependencies required <br>
->   - keyboard
+   - keyboard <br>
 Install the dendencies using: `pip3 install -r requirements.txt`
 
 ## Running
