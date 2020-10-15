@@ -3,8 +3,8 @@ A keylogger written in python3, which sends the data to the host
 in a given time interval
 
 ## Requirements
-Dependencies required <br>
-   - keyboard <br>
+Dependencies required 
+   - keyboard
 Install the dendencies using: `pip3 install -r requirements.txt`
 
 ## Running
