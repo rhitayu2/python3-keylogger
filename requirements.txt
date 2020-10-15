@@ -1,2 +1,2 @@
 keyboard
-signal
+configparser==5.0.1
