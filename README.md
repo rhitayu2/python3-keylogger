@@ -3,8 +3,8 @@ A keylogger written in python3, which sends the data to the host
 in a given time interval
 
 ## Requirements
-Dependencies required
-    * keyboard
+Dependencies required <br>
+>   - keyboard
 Install the dendencies using: `pip3 install -r requirements.txt`
 
 ## Running
@@ -13,8 +13,8 @@ Install the dendencies using: `pip3 install -r requirements.txt`
 3. The keylogger file would require sudo privileges.
 
 ## Tweaking
-1. You can change the interval with which the program `keylogger.py` 
+1. You can change the **interval** with which the program `keylogger.py` 
    would send the data.
-2. Change the host or port in the `server.py` file
+2. Change the **host or port** in the `server.py` file
 
 
