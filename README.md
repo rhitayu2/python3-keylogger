@@ -8,7 +8,7 @@ Dependencies required:
    <li>keyboard</li>
    <li>configparser</li>
    </ul>
-Install the dendencies using: `pip3 install -r requirements.txt`
+Install the dendencies using: ` pip3 install -r requirements.txt `
 
 ## Running
 1. Run the `server.py` using `python3 server.py`
